@@ -9,6 +9,11 @@ async function consumeExcelToJson  (req, res)  {
   
   //console.log('pathFile ' + pathFile);
   
+ var d = new Date();
+ var datetime = d.toLocaleString(); 	
+ console.log(datetime + ' consumeExcelToJson externalPartner: ' +externalPartner + ' pathFile: ' + pathFile );
+ 
+   
    
   var resolve =  await handleConsumeWebserviceExcelToJSON(externalPartner, pathFile);
   return resolve;	

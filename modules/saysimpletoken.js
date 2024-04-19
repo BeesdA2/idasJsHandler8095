@@ -10,7 +10,11 @@ async function consumeSaysimpleToken  (req, res)  {
   let apikey = req.query.apikey;	
    
   
-  
+  var d = new Date();
+  var datetime = d.toLocaleString(); 
+   
+  console.log(datetime + ' consumeApiWeb guid: ' +guid + ' filiaal: ' + filiaal + ' lib: ' + lib + ' applicatie: ' + applicatie + ' apikey: ' + apikey );
+
    
   var resolve =  await handlecreateSaysimpleToken(guid, lib, filiaal, applicatie, apikey);
   return resolve;	
